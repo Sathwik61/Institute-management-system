@@ -2,11 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Homepage from './pages/Homepage';
-// import AdminDashboard from './pages/admin/AdminDashboard';
-// import StudentDashboard from './pages/student/StudentDashboard';
-// import TeacherDashboard from './pages/teacher/TeacherDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import StudentDashboard from './pages/student/StudentDashboard';
+import TeacherDashboard from './pages/teacher/TeacherDashboard';
 import LoginPage from './pages/LoginPage';
-// import AdminRegisterPage from './pages/admin/AdminRegisterPage';
+import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
 
 const App = () => {

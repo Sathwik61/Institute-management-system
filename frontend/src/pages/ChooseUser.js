@@ -11,7 +11,7 @@ import {
 import { AccountCircle, School, Group } from '@mui/icons-material';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { loginUser } from '../redux/userRelated/userHandle';
 import Popup from '../components/Popup';
 
 const ChooseUser = ({ visitor }) => {
