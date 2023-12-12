@@ -4,68 +4,61 @@ import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 import Students from "../assets/smvitm.png";
 import { LightPurpleButton } from '../components/buttonStyles';
-// import mp4 from '../media/'
+
 const Homepage = () => {
     return (
-        // <StyledContainer>
-        //     <Grid container spacing={0}>
-                
-        //         <Grid item xs={12} md={6}>
-        //             <StyledPaper elevation={3}>
-                       
-        //                 <StyledBox>
-        //                     <StyledLink to="/choose">
-        //                         <LightPurpleButton variant="contained" fullWidth>
-        //                             Login
-        //                         </LightPurpleButton>
-        //                     </StyledLink>
-        //                     {/* <StyledLink to="/chooseasguest">
-        //                         <Button variant="outlined" fullWidth
-        //                             sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
-        //                         >
-        //                             Login as Guest
-        //                         </Button>
-        //                     </StyledLink> */}
-        //                     {/* <StyledText>
-        //                         Don't have an account?{' '}
-        //                         <Link to="/Adminregister" style={{color:"#550080"}}>
-        //                             Sign up
-        //                         </Link>
-        //                     </StyledText> */}
-        //                 </StyledBox>
-        //             </StyledPaper>
-        //         </Grid>
-        //     </Grid>
-        // </StyledContainer>
-        <>
-        <header class="header">
-			<h1>SMVITM</h1>
+        <StyledContainer>
+            <Grid container spacing={0}>
+                <Grid item xs={12} md={6}>
+                    <img src={Students} alt="students" style={{ width: '100%' }} />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <StyledPaper elevation={3}>
+                        <StyledTitle>
+                            {/* SMVITM */}
+                            <br />
+                            Institution Management
+                            <br />
+                            System
+                        </StyledTitle>
+                        {/* <StyledText>
+                            Streamline Institution management, class organization, and add students and faculty.
+                            Seamlessly track attendance, assess performance, and provide feedback.
+                            Access records, view marks, and communicate effortlessly.
+                        </StyledText> */}
+                        <StyledBox>
+                            <StyledLink to="/choose">
+                                <LightPurpleButton variant="contained" fullWidth>
+                                    Login
+                                </LightPurpleButton>
+                            </StyledLink>
+                            {/* <StyledLink to="/chooseasguest">
+                                <Button variant="outlined" fullWidth
+                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                >
+                                    Login as Guest
+                                </Button>
+                            </StyledLink> */}
+                            {/* <StyledText>
+                                Don't have an account?{' '}
+                                <Link to="/Adminregister" style={{color:"#550080"}}>
+                                    Sign up
+                                </Link>
+                            </StyledText> */}
+                        </StyledBox>
+                    </StyledPaper>
+                </Grid>
+            </Grid>
+        </StyledContainer>
+        // <>
+        // <button  >
+        //         <StyledLink to="/choose">
+        //           Login
+        //         </StyledLink>
 
-			<div class="hamburger"></div>
-		</header>
-
-		<nav class="navigation">
-			<ul>
-				<li><a class="nav_link" href="#">Login</a></li>
-				
-				<li><a class="nav_link" href="https://sode-edu.in/upcoming-events/">Events</a></li>
-				<li><a class="nav_link" href="https://sode-edu.in/">About</a></li>
-				<li><a class="nav_link" href="https://sode-edu.in/contact-us/enquiry/">Contact</a></li>
-			</ul>
-		</nav>
-
-		<section class="video_container">
-			<video autoplay loop muted src="../media/background.mp4"></video>
-			<div class="overlay"></div>
-
-			<section class="content_container">
-				<h1 class="album_title">SMVITM</h1>
-				<h3 class="subtitle">College Management System</h3>
-				
-				<button class="order_button">Continue....</button>
-			</section>
-		</section>
-        </>
+        //     </button>
+        // </>
+          
     );
 };
 

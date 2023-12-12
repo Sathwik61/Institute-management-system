@@ -14,6 +14,7 @@ const App = () => {
 
   return (
     <Router>
+     
       {currentRole === null &&
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -47,6 +48,7 @@ const App = () => {
         </>
       }
     </Router>
+ 
   )
 }
 
