@@ -22,8 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
-
-/src/pages/admin
-/src/pages/student
-/src/pages/teacher
