@@ -27,5 +27,5 @@ yarn-error.log*
 /src/pages/admin/
 /src/pages/student/
 /src/pages/teacher/
-/redux/
+/redux
 
