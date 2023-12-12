@@ -24,8 +24,8 @@ yarn-error.log*
 
 
 # files
+/src/pages/admin/
+/src/pages/student/
+/src/pages/teacher/
+/redux/
 
-/src/pages/admin
-/src/pages/student
-/src/pages/teacher
-/redux
