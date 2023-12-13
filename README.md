@@ -8,4 +8,56 @@ The Institue Management System is a web-based application built using MERN(Mongo
 
 ## Technologies Used
 
-- Frontend: React.js, Material UI, Netlify, tailwind css.
+- Frontend: React.js, Material UI, tailwind css.
+- Backend : Nodejs , MongoDB
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Sathwik61/Institute-management-system.git
+```
+
+Go to the project directory
+
+```bash
+  cd event-management-system
+```
+
+```bash
+  cd frontend
+```
+Add .env file and add your MONGO_URI 
+
+```bash
+  touch .env
+```
+run
+```bash
+  npm Install || npm start  
+```
+
+```bash
+  cd backend
+```
+run
+```bash
+  npm Install || npm start  
+```
+
+```bash
+  npm start
+```
+##### server is on
+```bash
+ http://localhost:3000
+```
+
+##### Open in the browser
+```bash
+ http://localhost:3000
+```
+
+
