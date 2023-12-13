@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { registerHosteller } from '../../../redux/hosteller/hostellerHandle';
+
 import axios from 'axios';
-const AddStudent = () => {
+const AddHosteller = () => {
+  const dispatch = useDispatch()
     const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
     const [password, setPassword] = useState('');
@@ -9,42 +13,23 @@ const AddStudent = () => {
     // State variables for handling loading and errors
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [loader, setLoader] = useState(false)
+    const userState = useSelector(state => state.user);
+    const { status, currentUser, response } = userState;
+    
+    const adminID = currentUser._id
+    const role = "Hosteller"
+    const fields = { name, rollNum, password, hostelName}
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        try {
-            setLoading(true);
-    
-            // Send data to the server using Axios
-            const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/HostellerReg`, {
-              name,
-              rollNum,
-              password,
-              hostelName,
-            });
-    
-            // Assuming the server responds with a success message
-            alert(response.data.message);
-    
-            // Clear the form after successful submission
-            setName('');
-            setRollNum('');
-            setPassword('');
-            setHostelName('');
-    
-            setLoading(false);
-        } catch (error) {
-            console.error('Error adding hostel student:', error);
-    
-            // Update state with the error message
-            setError('An error occurred while adding the hostel student. Check the console for more details.');
-    
-            setLoading(false);
-          }
+        setLoader(true)
+        dispatch(registerHosteller(fields, role))
+ 
     }
     return (
         <>
-             <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4">
       <form className="max-w-md mx-auto bg-white p-8 rounded shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Add Hostel Student</h2>
 
@@ -111,4 +96,4 @@ const AddStudent = () => {
     )
 }
 
-export default AddStudent
+export default AddHosteller

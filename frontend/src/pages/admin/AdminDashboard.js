@@ -18,8 +18,8 @@ import AdminProfile from './AdminProfile';
 import AdminHomePage from './AdminHomePage';
 
 import AddStudent from './studentRelated/AddStudent';
-// import AddHosteller from './hosteller/AddHosteller';
-// import ShowHosteller from './hosteller/ShowHosteller';
+import AddHosteller from './hosteller/AddHosteller';
+import ShowHosteller from './hosteller/ShowHosteller';
 import SeeComplains from './studentRelated/SeeComplains';
 import ShowStudents from './studentRelated/ShowStudents';
 import StudentAttendance from './studentRelated/StudentAttendance';
@@ -128,8 +128,8 @@ const AdminDashboard = () => {
                         <Route path="/Admin/students/student/attendance/:id" element={<StudentAttendance situation="Student" />} />
                         <Route path="/Admin/students/student/marks/:id" element={<StudentExamMarks situation="Student" />} />
                         {/* Student */}
-                        {/* <Route path="/Admin/hosteller" element={<ShowHosteller />} /> 
-                        <Route path="/Admin/addhosteller" element={<AddHosteller />} />  */}
+                        <Route path="/Admin/hosteller" element={<ShowHosteller />} /> 
+                        <Route path="/Admin/addhosteller" element={<AddHosteller />} /> 
 
                         {/* Teacher */}
                         <Route path="/Admin/teachers" element={<ShowTeachers />} />

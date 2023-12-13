@@ -1,4 +1,4 @@
-const Hosteller = require('../models/hostellerSchema.js');
+const hosteller = require('../models/hostelSchema');
 
 
 const hostellerRegister = async (req, res) => {
@@ -6,7 +6,7 @@ const hostellerRegister = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(req.body.password, salt);
 
-        const existingStudent = await Hosteller.findOne({
+        const existingStudent = await hosteller.findOne({
             rollNum: req.body.rollNum,
             hostelName: req.body.hostelName,
         });
@@ -14,7 +14,7 @@ const hostellerRegister = async (req, res) => {
         if (existingStudent) {
             res.status(400).json({ message: 'Roll Number already exists' });
         } else {
-            const hostelStudent = new Hosteller({
+            const hostelStudent = new hosteller({
                 name: req.body.name,
                 rollNum: req.body.rollNum,
                 password: hashedPass,
@@ -23,8 +23,8 @@ const hostellerRegister = async (req, res) => {
 
             let result = await hostelStudent.save();
 
-            result.password = undefined; // Exclude password from the response
-            res.status(201).json(result); // HTTP 201 Created
+            result.password = undefined; 
+            res.status(201).json(result);
         }
     } catch (err) {
         console.error('Error registering hostel student:', err);
